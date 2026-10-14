@@ -11,7 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&amp;family=Unbounded:wght@500;600&amp;display=swap">
 <!--
-  Draftora's roadmap, next to the download page (same tokens). Static, no scripts. Source: release-site/roadmap.html
+  Draftora's roadmap, next to the download page (same tokens). One small script: on opening, the page glides to the
+  version that comes next and lights it up (user request, 2026-10-14). Source: release-site/roadmap.html
   (this template) and release-site/roadmap.json (the content) in the Draftora repo; scripts/roadmap.mjs renders it and
   publishes it to github.com/BcanGRG/draftora-releases as yol-haritasi.html.
 -->
@@ -57,7 +58,19 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
 .ask { display: inline-block; margin-left: 4px; padding: 0 8px; border-radius: 999px; font: 500 11px/18px var(--font-body); color: var(--ice); border: 1px solid #2e4a66; white-space: nowrap; }
 /* what is live, what comes next: the two that matter most */
 .is-released .tag { color: var(--accent); border-color: #4c5c2a; }
-.is-next { border-color: var(--accent); background: var(--surface-raised); }
+.is-next { border-color: var(--accent); background: var(--surface-raised); box-shadow: 0 0 0 1px var(--accent), 0 0 26px rgba(200, 242, 90, .22); }
+/* on arrival: two waves of light around the card, then the soft glow stays */
+.is-next.arrive { animation: arrive 2.6s ease-out 1; }
+@keyframes arrive {
+  0% { box-shadow: 0 0 0 1px var(--accent), 0 0 0 0 rgba(200, 242, 90, 0); }
+  22% { box-shadow: 0 0 0 2px var(--accent), 0 0 54px 8px rgba(200, 242, 90, .5); }
+  48% { box-shadow: 0 0 0 1px var(--accent), 0 0 22px 2px rgba(200, 242, 90, .2); }
+  68% { box-shadow: 0 0 0 2px var(--accent), 0 0 44px 6px rgba(200, 242, 90, .4); }
+  100% { box-shadow: 0 0 0 1px var(--accent), 0 0 26px rgba(200, 242, 90, .22); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .is-next.arrive { animation: none; }
+}
 .is-next .tag { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .is-next ul { color: var(--ink); }
 .is-later { background: transparent; border-style: dashed; }
@@ -280,5 +293,35 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
   </section>
   <p class="caption legal">"Oyuncu isteği" yazanlar Draftora'yı kullananların önerileri. Planlanan sürümlerin içeriği oynadıkça değişebilir. Draftora, Riot Games tarafından onaylanmamıştır ve Riot Games'in görüşlerini yansıtmaz.</p>
 </main>
+<script>
+// Opens at the version that comes next: a glide to it and light around it. A link with its own #anchor keeps its
+// place; "Sırada" at the top glides there again. Without motion (the reader's setting) it jumps and simply glows.
+;(() => {
+  const next = document.querySelector('.ver.is-next')
+  if (!next) return
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const light = () => {
+    next.classList.remove('arrive')
+    void next.offsetWidth
+    next.classList.add('arrive')
+  }
+  const go = () => {
+    const fits = next.offsetHeight < window.innerHeight * 0.8
+    next.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: fits ? 'center' : 'start' })
+    window.setTimeout(light, still ? 0 : 650)
+  }
+  for (const link of document.querySelectorAll(`a[href="#${next.id}"]`)) {
+    link.addEventListener('click', (event) => {
+      event.preventDefault()
+      history.replaceState(null, '', `#${next.id}`)
+      go()
+    })
+  }
+  if (location.hash) return
+  const start = () => window.setTimeout(go, still ? 0 : 450)
+  if (document.readyState === 'complete') start()
+  else window.addEventListener('load', start, { once: true })
+})()
+</script>
 </body>
 </html>
