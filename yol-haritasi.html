@@ -90,7 +90,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
     <h1>Yol haritası</h1>
     <p class="lede">Her sürümde ne geldi, sırada ne var. Sürümler küçük: her birinde iki üç değişiklik. Yeni sürüm çıkınca Draftora kendini bir sonraki açılışta günceller.</p>
     <span class="caption">Şu an yayında: 0.1.3 · Son güncelleme: 15 Ekim 2026</span>
-    <span class="jump"><a href="#v0.1.4">Sırada: 0.1.4 · Eşyalar ve güncelleme deneyimi ↓</a></span>
+    <span class="jump"><a href="#v0.1.4">Sırada: 0.1.4 · Eşyalar ve karşı seçim ↓</a></span>
   </div>
   <section class="list" aria-label="Sürümler">
       <article class="ver is-released" id="v0.1.0">
@@ -142,19 +142,29 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
       <article class="ver is-next" id="v0.1.4">
         <header>
           <span class="tag">Sırada</span>
-          <h2><span class="num">0.1.4</span> Eşyalar ve güncelleme deneyimi</h2>
+          <h2><span class="num">0.1.4</span> Eşyalar ve karşı seçim</h2>
         </header>
         <ul>
           <li>Büyücü'deki eşya ekranı sadeleşir: aynı düzen, daha ferah; daha az kutu ve sayı kalabalığı. <span class="ask">oyuncu isteği</span></li>
           <li>Eşya önerilerinin mantığı denetlenir ve yanlışlar düzeltilir (ör. alışveriş sırasında iki çizme, &quot;duruma göre&quot; sütununda rakiple ilgisi olmayan eşyalar). Rakibe göre gelen öneriler ayrıntılı incelenir: hangi veriye dayanıyor (o rakiple oynanan maçlar mı, genel tablo mu), kaç maç var, rakibin hangi özelliği (hasar türü, iyileşme, kalkan, kontrol) o eşyayı getiriyor; ekranda da bu açıkça yazar. <span class="ask">oyuncu isteği</span></li>
           <li>Karşı seçim önerileri yalnızca metaya bakmaz: şampiyonun genel gücü ile o rakibe karşı gerçek eşleşme sonucu harmanlanır. Metada olmasa da rakibine açıkça counter olan şampiyonlar, yeterli maçı varsa listede görünür ve neden orada olduğu yazar. <span class="ask">oyuncu isteği</span></li>
-          <li>Güncelleme belli olur: yeni sürüm hazır olunca küçük bir bildirim (&quot;kapatınca kurulur · Şimdi kur&quot;; seçim ve oyun sırasında asla), kurulum Windows penceresi yerine Draftora'nın kendi ekranında ilerlemesiyle, sonra &quot;Neler yeni?&quot;. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
       <article class="ver is-planned" id="v0.1.5">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.5</span> Ana sayfa</h2>
+          <h2><span class="num">0.1.5</span> Güncelleme deneyimi</h2>
+        </header>
+        <ul>
+          <li>Yeni sürüm hazır olunca küçük bir bildirim: &quot;kapatınca kurulur · Şimdi kur&quot;. Şampiyon seçimi, yükleme ekranı ve oyun sırasında asla çıkmaz. <span class="ask">oyuncu isteği</span></li>
+          <li>Kurulum Windows penceresi yerine Draftora'nın kendi ekranında, ne kadar kaldığını gösteren bir ilerlemeyle; bitince Draftora kendiliğinden yeniden açılır. <span class="ask">oyuncu isteği</span></li>
+          <li>Güncellemeden sonraki ilk açılışta &quot;Neler yeni?&quot;: o sürümde gelenler bir kez gösterilir. <span class="ask">oyuncu isteği</span></li>
+        </ul>
+      </article>
+      <article class="ver is-planned" id="v0.1.6">
+        <header>
+          <span class="tag">Planlandı</span>
+          <h2><span class="num">0.1.6</span> Ana sayfa</h2>
         </header>
         <ul>
           <li>Ana sayfanın başlığı &quot;Sanctum&quot; yerine &quot;Draftora&quot;. <span class="ask">oyuncu isteği</span></li>
@@ -162,10 +172,10 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Ayarlar düğmesi daha büyük ve kolay bulunur. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.6">
+      <article class="ver is-planned" id="v0.1.7">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.6</span> Maç sayfası</h2>
+          <h2><span class="num">0.1.7</span> Maç sayfası</h2>
         </header>
         <ul>
           <li>Seçim başlayınca ana pencere Kule, Yıldız ve Büyücü arasında atlamak yerine tek bir Maç sayfasında kalır: ban, seçim, son hazırlık ve yükleme o sayfada sırayla gösterilir. Ayrıntı isteyen yine Kule, Yıldız ya da Büyücü'yü açabilir. <span class="ask">oyuncu isteği</span></li>
@@ -173,10 +183,10 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Oyun planı artık kaçmaz: yükleme ekranı okumaya yetmediği için plan oyun boyunca Maç sayfasında durur; overlay yükleme ekranında yalnız birkaç satırlık özetini gösterir. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.7">
+      <article class="ver is-planned" id="v0.1.8">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.7</span> Eşleşme planı</h2>
+          <h2><span class="num">0.1.8</span> Eşleşme planı</h2>
         </header>
         <ul>
           <li>Oyun planı genel cümleler yerine senin koridor rakibine göre konuşur: kim hangi seviyede ve hangi eşyayla güçlenir, ne zaman takas yapıp ne zaman geri çekilmeli, rakibin tehlikeli yeteneği ve ormancıya dikkat; her cümle bu eşleşmenin verisine dayanır. Tamamı Maç sayfasında, kısa hali overlay'de. <span class="ask">oyuncu isteği</span></li>
@@ -184,30 +194,30 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Az maçlı eşleşmelerde uydurma tavsiye yok: veri yetmezse bunu söyler ve genel yöne döner.</li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.8">
+      <article class="ver is-planned" id="v0.1.9">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.8</span> İstemciye aktarma</h2>
+          <h2><span class="num">0.1.9</span> İstemciye aktarma</h2>
         </header>
         <ul>
           <li>Overlay'de rünlerle birlikte sihirdar büyüleri de aktarılır (ör. Şifa + Sıçra); Sıçra'yı D'de mi F'de mi kullandığını seçersin, Draftora hatırlar. <span class="ask">oyuncu isteği</span></li>
           <li>Overlay'de bir karta tıklayınca o şampiyon istemcide seçili olur; kilitlemek yine sende. Riot kurallarına göre karar bekleniyor. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.9">
+      <article class="ver is-planned" id="v0.1.10">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.9</span> Kartlar ve tanıtım</h2>
+          <h2><span class="num">0.1.10</span> Kartlar ve tanıtım</h2>
         </header>
         <ul>
           <li>Kartın üstüne gelince kenar ışığı da görünür (şu an yalnızca hale var). <span class="ask">oyuncu isteği</span></li>
           <li>GitHub sayfalarındaki tanıtım yazıları (README) yenilenir: ne işe yarar, nasıl kurulur, ekran görüntüleri. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.10">
+      <article class="ver is-planned" id="v0.1.11">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.10</span> Sağlamlık</h2>
+          <h2><span class="num">0.1.11</span> Sağlamlık</h2>
         </header>
         <ul>
           <li>LoL'e hazır bekleyen Draftora: Windows açılınca tepside sessizce başlar, pencereyi kapatınca tepsiye iner; nasıl yapılacağı o sürümde birlikte kararlaştırılır. <span class="ask">oyuncu isteği</span></li>
@@ -215,30 +225,30 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Eski yamaların verisi kendiliğinden temizlenir, disk dolmaz.</li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.11">
+      <article class="ver is-planned" id="v0.1.12">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.11</span> Yükleme ve denetim</h2>
+          <h2><span class="num">0.1.12</span> Yükleme ve denetim</h2>
         </header>
         <ul>
           <li>İçerik yüklenirken sayfayı kaplamayan, yerinde duran göstergeler (iskelet kutular, küçük dönen simgeler); masaüstü uygulamalarda ne zaman ve ne kadar kullanıldığı araştırılır. <span class="ask">oyuncu isteği</span></li>
           <li>İnternet yokken, hata olunca, ekran okuyucuyla ve iki dilde her ekranın denetimi.</li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.12">
+      <article class="ver is-planned" id="v0.1.13">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.12</span> Testler</h2>
+          <h2><span class="num">0.1.13</span> Testler</h2>
         </header>
         <ul>
           <li>Arada bir düşen otomatik testler kararlı hale gelir.</li>
           <li>Kurulu uygulamanın kendisinde otomatik test ve temiz bir bilgisayara kurulum testi.</li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.13">
+      <article class="ver is-planned" id="v0.1.14">
         <header>
           <span class="tag">Planlandı</span>
-          <h2><span class="num">0.1.13</span> Veri denetimi</h2>
+          <h2><span class="num">0.1.14</span> Veri denetimi</h2>
         </header>
         <ul>
           <li>Verileri aldığımız kaynakların (Lolalytics, U.GG, Riot'un oyun verileri) ayrıntılı gözden geçirilmesi: doğru mu, güncel mi, daha iyi bir kaynak var mı. <span class="ask">oyuncu isteği</span></li>
