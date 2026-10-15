@@ -90,7 +90,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
     <h1>Yol haritası</h1>
     <p class="lede">Her sürümde ne geldi, sırada ne var. Sürümler küçük: her birinde iki üç değişiklik. Yeni sürüm çıkınca Draftora kendini bir sonraki açılışta günceller.</p>
     <span class="caption">Şu an yayında: 0.1.4 · Son güncelleme: 15 Ekim 2026</span>
-    <span class="jump"><a href="#v0.1.5">Sırada: 0.1.5 · Güncelleme deneyimi ↓</a></span>
+    <span class="jump"><a href="#v0.1.5">Sırada: 0.1.5 · Güncelleme deneyimi ve yeni overlay ↓</a></span>
   </div>
   <section class="list" aria-label="Sürümler">
       <article class="ver is-released" id="v0.1.0">
@@ -153,13 +153,14 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
       <article class="ver is-next" id="v0.1.5">
         <header>
           <span class="tag">Sırada</span>
-          <h2><span class="num">0.1.5</span> Güncelleme deneyimi</h2>
+          <h2><span class="num">0.1.5</span> Güncelleme deneyimi ve yeni overlay</h2>
         </header>
         <ul>
           <li>Yeni sürüm hazır olunca küçük bir bildirim: &quot;kapatınca kurulur · Şimdi kur&quot;. Şampiyon seçimi, yükleme ekranı ve oyun sırasında asla çıkmaz. <span class="ask">oyuncu isteği</span></li>
           <li>Kurulum Windows penceresi yerine Draftora'nın kendi ekranında, ne kadar kaldığını gösteren bir ilerlemeyle; bitince Draftora kendiliğinden yeniden açılır. <span class="ask">oyuncu isteği</span></li>
           <li>Güncellemeden sonraki ilk açılışta &quot;Neler yeni?&quot;: o sürümde gelenler bir kez gösterilir. <span class="ask">oyuncu isteği</span></li>
-          <li>Overlay'deki seçim kartlarında şampiyon resimleri yeniden tam görünür (0.1.4'te yüzler kesiliyordu). <span class="ask">oyuncu isteği</span></li>
+          <li>Overlay baştan tasarlanır (oyuncu isteği): şampiyon resimleri kesilmeden ve sıkışmadan, her aşamada pencereye rahatça sığan bir düzen; sonra gelecekler (mühür, Maç sayfası, eşleşme planı, takım modu, Ranked 5s'in ikinci ban turu) için yeri baştan düşünülür. <span class="ask">oyuncu isteği</span></li>
+          <li>Overlay'de karşı seçimde &quot;meta dışı&quot; öneri: koridorun kendi şampiyonlarından, eşleşmede güçlü ama metada olmadığı için listeye girmeyen biri (ör. Tristana'ya karşı Zeri). Koridor dışı öneriler Savaş Arabası'nda kalır. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
       <article class="ver is-planned" id="v0.1.6">
@@ -296,13 +297,14 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
       <article class="ver is-later" id="v0.5.x">
         <header>
           <span class="tag">Sonra</span>
-          <h2><span class="num">0.5.x</span> Takım modu: 5'li ve Clash</h2>
+          <h2><span class="num">0.5.x</span> Takım modu: Ranked 5s, Clash ve esnek dereceli</h2>
         </header>
         <ul>
           <li>0.5.0 · Takım Odası: biri oda açar, kodu paylaşır, arkadaşlar kendi Draftora'sından katılır. Herkes rolünü ve rahat oynadığı şampiyonları işaretler; Draftora beş havuzdan en güçlü takım dizilimlerini ve ortak ban listesini çıkarır. <span class="ask">oyuncu isteği</span></li>
           <li>0.5.1 · Canlı ortak draft tahtası: seçimde herkesin overlay'i aynı planı gösterir, banlara oy verilir, rakip planı bozunca B planı herkese aynı anda düşer. <span class="ask">oyuncu isteği</span></li>
           <li>0.5.2 · Clash hazırlık modu: turnuvadan önce 2-3 takım dizilimi ve her biri için ban planı, meta takımlara karşı deneme draftı; turnuva günü overlay hangi planın oynandığını söyler. <span class="ask">oyuncu isteği</span></li>
           <li>0.5.3 · Maç sonrası takım özeti: draftı birlikte değerlendirme; tahmin neydi, ne oldu, hangi karar işe yaradı. <span class="ask">oyuncu isteği</span></li>
+          <li>Ranked 5s (hafta sonu açılan 5'li dereceli) ve esnek dereceli: grup aynı şampiyon seçimine girince Takım Odası ve ortak draft tahtası orada da çalışır; Clash hazırlığının aynısı (2-3 takım dizilimi, iki ban aşaması için ban planı) sabit 5'liniz için turnuva olmadan da yapılır. Draftora sırayı (Ranked 5s, Clash, esnek) kendisi tanır. <span class="ask">oyuncu isteği</span></li>
           <li>Rakip takımı izleme yok: rakip oyuncuların adlarına, geçmişine ya da havuzlarına bakılmaz (Draftora'nın kuralı ve Riot'un kuralları). Arkadaşlar yalnızca kendi istedikleriyle, kendi seçtikleri takma adla katılır.</li>
         </ul>
       </article>
