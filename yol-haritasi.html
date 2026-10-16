@@ -188,6 +188,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Oyun başlayınca aynı sayfa oyuna geçer: eşyalar (alış sırası, tam dizilim, duruma göre), hangi yeteneği ne zaman yükselteceğin ve oyun planı. Büyücü yalnız eşya ekranı olarak kalır. <span class="ask">oyuncu isteği</span></li>
           <li>Oyun planı artık kaçmaz: yükleme ekranı okumaya yetmediği için plan oyun boyunca Maç sayfasında durur; overlay yükleme ekranında yalnız birkaç satırlık özetini gösterir. <span class="ask">oyuncu isteği</span></li>
           <li>Küçük düzeltme: yeni sürüm ilk hazır olduğunda &quot;Draftora X hazır · Kapatınca kurulur · Şimdi kur&quot; penceresi kendiliğinden açık gelir (sürüm başına bir kez, yalnızca League boştayken); sonrası başlık çubuğundaki işaretten açılır. <span class="ask">oyuncu isteği</span></li>
+          <li>Küçük düzeltme: kilitleme anında mühür sesinden sonra Draftora şampiyonun sözünü artık çalmaz; oyunun kendi seçme seslendirmesiyle karışmasın diye yalnızca tok mühür sesi kalır. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
       <article class="ver is-planned" id="v0.1.8">
@@ -207,6 +208,8 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <h2><span class="num">0.1.9</span> İstemciye aktarma</h2>
         </header>
         <ul>
+          <li>Şampiyonunu kilitleyip &quot;İstemciye aktar&quot; dedikten sonra overlay draftın gücüne döner: takımın kazanma tahmini, rakip koridorlar ve senin kartın. <span class="ask">oyuncu isteği</span></li>
+          <li>Draft sonradan değişir ve önerilen rünler ya da büyüler değişirse overlay seni uyarır (&quot;Rün önerisi değişti: … yerine …&quot;); istersen tek tıkla aktarırsın, istemezsen kapatır, draft analizine dönersin. <span class="ask">oyuncu isteği</span></li>
           <li>Overlay'de rünlerle birlikte sihirdar büyüleri de aktarılır (ör. Şifa + Sıçra); Sıçra'yı D'de mi F'de mi kullandığını seçersin, Draftora hatırlar. <span class="ask">oyuncu isteği</span></li>
           <li>Overlay'de bir karta tıklayınca o şampiyon istemcide seçili olur; kilitlemek yine sende. Riot kurallarına göre karar bekleniyor. <span class="ask">oyuncu isteği</span></li>
         </ul>
