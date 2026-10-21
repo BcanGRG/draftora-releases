@@ -90,7 +90,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
     <h1>Yol haritası</h1>
     <p class="lede">Her sürümde ne geldi, sırada ne var. Sürümler küçük: her birinde iki üç değişiklik. Yeni sürüm çıkınca Draftora kendini bir sonraki açılışta günceller.</p>
     <span class="caption">Şu an yayında: 0.1.10 · Son güncelleme: 21 Ekim 2026</span>
-    <span class="jump"><a href="#v0.1.11">Sırada: 0.1.11 · Sağlamlık ↓</a></span>
+    <span class="jump"><a href="#v0.1.11">Sırada: 0.1.11 · Aynı sayılar ve sağlamlık ↓</a></span>
   </div>
   <section class="list" aria-label="Sürümler">
       <article class="ver is-released" id="v0.1.0">
@@ -231,14 +231,14 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
       <article class="ver is-next" id="v0.1.11">
         <header>
           <span class="tag">Sırada</span>
-          <h2><span class="num">0.1.11</span> Sağlamlık</h2>
+          <h2><span class="num">0.1.11</span> Aynı sayılar ve sağlamlık</h2>
         </header>
         <ul>
-          <li>Aynı draftta seninle takım arkadaşının Draftora'sı farklı kazanma tahmini ve farklı bot ikilileri gösterebiliyor: nedeni kökten çözülür. Hangi lig, bölge ve tarihteki veriyle hesaplandığı her ekranda görünür, yüklenemeyen veri söylenir, iki bilgisayar aynı günün verisini kullanır. <span class="ask">oyuncu isteği</span></li>
-          <li>LoL'e hazır bekleyen Draftora: Windows açılınca tepside sessizce başlar, pencereyi kapatınca tepsiye iner; nasıl yapılacağı o sürümde birlikte kararlaştırılır. <span class="ask">oyuncu isteği</span></li>
-          <li>İlk açılışta bazen boş kalan pencerenin asıl nedeni bulunup çözülür.</li>
-          <li>Küçük düzeltme: açılışta, kart destesiyle gelen açılış ekranından önce ana ekran bir an görünüp kayboluyorsa bu giderilir; Draftora ilk kareden açılış ekranıyla başlar. <span class="ask">oyuncu isteği</span></li>
-          <li>Eski yamaların verisi kendiliğinden temizlenir, disk dolmaz.</li>
+          <li>Aynı draftta sen ve takım arkadaşın aynı tahmini ve aynı bot ikililerini görürsünüz: şampiyon seçiminde her Draftora aynı temelden hesaplar (Zümrüt+ · son 30 gün · tüm bölgeler). Overlay hangi aralık ve hangi günün verisiyle hesaplandığını yazar, gelmeyen veriyi söyler; isteyen Ayarlar'dan kendi aralığını kullanır. <span class="ask">oyuncu isteği</span></li>
+          <li>Draftora LoL ile açılır ve kapanır: Windows açılınca görünmeden bekler, LoL açılınca açılır, LoL kapanınca kapanır. Ayarlar'dan kapatılabilir. <span class="ask">oyuncu isteği</span></li>
+          <li>İlk açılışta bazen boş kalan pencere düzeltilir: pencere ilk ekranı hazır olunca açılır.</li>
+          <li>Küçük düzeltme: açılış her zaman ilk kareden açılış ekranıyla başlar, önce ana ekran bir an görünmez. <span class="ask">oyuncu isteği</span></li>
+          <li>Eski yamaların verisi yeni yama gelince kendiliğinden silinir; bu ve önceki yama tutulur.</li>
         </ul>
       </article>
       <article class="ver is-planned" id="v0.1.12">
