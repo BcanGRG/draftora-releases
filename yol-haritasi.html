@@ -57,7 +57,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
 .ver li::marker { color: var(--ink-muted); }
 .ask { display: inline-block; margin-left: 4px; padding: 0 8px; border-radius: 999px; font: 500 11px/18px var(--font-body); color: var(--ice); border: 1px solid #2e4a66; white-space: nowrap; }
 /* what is live, what comes next: the two that matter most */
-.is-released .tag { color: var(--accent); border-color: #4c5c2a; }
+.is-released .tag, .is-done .tag { color: var(--accent); border-color: #4c5c2a; }
 .is-next { border-color: var(--accent); background: var(--surface-raised); box-shadow: 0 0 0 1px var(--accent), 0 0 26px rgba(200, 242, 90, .22); }
 /* on arrival: two waves of light around the card, then the soft glow stays */
 .is-next.arrive { animation: arrive 2.6s ease-out 1; }
@@ -90,7 +90,7 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
     <h1>Yol haritası</h1>
     <p class="lede">Her sürümde ne geldi, sırada ne var. Sürümler küçük: her birinde iki üç değişiklik. Yeni sürüm çıkınca Draftora kendini bir sonraki açılışta günceller.</p>
     <span class="caption">Şu an yayında: 0.1.12 · Son güncelleme: 2 Kasım 2026</span>
-    <span class="jump"><a href="#v0.1.13">Sırada: 0.1.13 · Veri denetimi ↓</a></span>
+    <span class="jump"><a href="#v0.1.14">Sırada: 0.1.14 · Açık hatalar ve yama gecesi ↓</a></span>
   </div>
   <section class="list" aria-label="Sürümler">
       <article class="ver is-released" id="v0.1.0">
@@ -252,9 +252,9 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Küçük düzeltme: LoL'ü kapatınca Draftora birkaç saniye içinde kapanır. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
-      <article class="ver is-next" id="v0.1.13">
+      <article class="ver is-done" id="v0.1.13">
         <header>
-          <span class="tag">Sırada</span>
+          <span class="tag">Tamamlandı · 2 Kasım 2026</span>
           <h2><span class="num">0.1.13</span> Veri denetimi</h2>
         </header>
         <ul>
@@ -263,9 +263,9 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <li>Bulunan sorunlar küçük sürümlere bölünüyor; ilki açık hatalar ve yama gecesi. Yeni özelliklerden (0.2.x) önce veri sağlam olsun.</li>
         </ul>
       </article>
-      <article class="ver is-planned" id="v0.1.14">
+      <article class="ver is-next" id="v0.1.14">
         <header>
-          <span class="tag">Planlandı</span>
+          <span class="tag">Sırada</span>
           <h2><span class="num">0.1.14</span> Açık hatalar ve yama gecesi</h2>
         </header>
         <ul>
