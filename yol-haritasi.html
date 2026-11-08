@@ -418,9 +418,10 @@ h1 { margin: 0; font: 600 36px/1.1 var(--font-display); }
           <h2><span class="num">0.4.2</span> Maç geçmişinden ban ve öneri</h2>
         </header>
         <ul>
-          <li>Öneriler hep aynı iki üç şampiyonda takılmaz: &quot;Kendi havuzumu hesaba kat&quot; açıkken de güncel güç (meta) hesaba girer; koridor ve alt koridor ikilileri de çeşitlenir. <span class="ask">oyuncu isteği</span></li>
-          <li>Son 50 dereceli maçına bakılır: en çok kaybettiğin rakip şampiyonlar ban önerisine ve şampiyon önerisine katılır. Yalnız şampiyonlar okunur, oyuncuların adı ya da kimliği okunmaz. <span class="ask">oyuncu isteği</span></li>
-          <li>Şampiyon seçiminde öneri sayısı 3'ten 4'e çıkar. <span class="ask">oyuncu isteği</span></li>
+          <li>Öneriler hep aynı iki üç şampiyonda takılmaz: kartlar her zaman verinin sırasında; &quot;Kendi havuzumu hesaba kat&quot; rolünde en çok oynadığın 5 şampiyonu işaretler ve güçleri yakınsa en çok ikisini ele katar. Bot ikilileri rakip seçmeden de güç ve uyuma göre sıralanır. <span class="ask">oyuncu isteği</span></li>
+          <li>Son dereceli maçların biriktirilir (istemci yalnız son 20 maçı verir; Draftora her yeni dereceli maçı bir kez okur, en çok 50 tutar): rakip takımdayken en çok kaybettiğin şampiyonlar iki ban sekmesine (&quot;Son 23 derecelide 4 maçta 3 kayıp&quot;) ve dördüncü karta (&quot;Sık kaybettiğin&quot;) girer. Yalnız şampiyonlar okunur, oyuncuların adı ya da kimliği okunmaz. <span class="ask">oyuncu isteği</span></li>
+          <li>Şampiyon seçiminde öneri sayısı 3'ten 4'e çıkar: seçimler, bot ikilileri ve banlar. <span class="ask">oyuncu isteği</span></li>
+          <li>Kartların altında sade gerekçe: o şampiyonu neden seçmen gerektiği (&quot;Draven karşısında koridorda üstün&quot;, &quot;Bu yamanın en güçlülerinden&quot;); sayılar kartın üstüne gelince balonda. <span class="ask">oyuncu isteği</span></li>
         </ul>
       </article>
       <article class="ver is-planned" id="v0.4.3">
